@@ -1,0 +1,77 @@
+<div class="container col-8 mt-4">
+    <h2>My Information</h2>
+    <form method="POST" action="/profileupdate">
+
+        <label class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input class="form-control" name="profileEmail" type="text" placeholder="Enter Email"
+                   value="{{currentUser}}">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Name</label>
+        <div class="col-sm-10">
+            <input class="form-control" name="profileName" type="text" placeholder="Enter Name" value="{{userName}}">
+        </div>
+
+        <label class="col-sm-2 col-form-label">City</label>
+        <div class="col-sm-10">
+            <input class="form-control" name="profileCity" type="text" placeholder="Enter City" value="{{userCity}}">
+        </div>
+
+        <label class="col-sm-2 col-form-label">Description</label>
+        <div class="col-sm-10">
+            <input class="form-control" name="profileDescription" type="text" placeholder="Enter Description"
+                   value="{{userDescription}}">
+        </div>
+
+        <div class="col-2 mt-3">
+            <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+    </form>
+
+    <h2>Trade Requests</h2>
+    {{#if trades}}
+        {{#each trades}}
+            {{#if this.incoming}}
+                Outgoing :
+                You give
+                {{this.iGiveYouThisBook}}
+                for this book
+                {{this.iWantThisBook}}
+                from this user
+                {{this.yourEmail}}
+                <form method="POST" action="/tradedelete">
+                    <input type="hidden" value="{{this.id}}" name="tradeId">
+                    <button class="btn btn-primary" type="submit">CANCEL</button>
+                </form>
+            {{else}}
+                Incoming :
+                {{this.myEmail}}
+                gives you
+                {{this.iGiveYouThisBook}}
+                for this book
+                {{this.iWantThisBook}}
+                <form method="POST" action="/tradeconfirm">
+                    <input type="hidden" value="{{this.id}}" name="tradeId">
+                    <button class="btn btn-primary" type="submit">CONFIRM</button>
+                </form>
+            {{/if}}
+        {{/each}}
+    {{else}}
+        <div class="trades">
+            There are currently no trade requests pending
+        </div>
+    {{/if}}
+
+
+    <h2>My Books</h2>
+    <form method="POST">
+        <input class="form-control" name="inputBook" type="text" placeholder="Enter Book Name">
+        <div class="col-2 mt-3">
+            <button class="btn btn-primary" type="submit">Add</button>
+        </div>
+    </form>
+    {{#each userBooks}}
+        <a href="{{this.webreader}}"><img src="{{this.thumbnail}}" class="img-thumbnail"></a>
+    {{/each}}
+</div>

@@ -1,0 +1,58 @@
+html, body{
+    backgroud-color: black;
+}
+
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html { overflow-y: scroll; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+    background: #fff;
+    margin: 20vh;
+    margin-top: 5vh;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 333px;
+}
+.form-item{
+    width: 300px;
+    margin: 3px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+#registercontainer{
+    margin: 5vh;
+    margin-left: 40vh;
+    margin-right: 40vh;
+    padding: 2vh;
+    border-radius : 8px ;
+}
+
+.imageText{
+    text-align: center;
+}

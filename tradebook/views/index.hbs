@@ -1,0 +1,34 @@
+<div class="container col-8 mt-4">
+
+    {{#if currentUser}}
+        {{#each allBooks}}
+
+            <div class="row">
+                    <div class="col-xs-4">
+                        <img src="{{this.thumbnail}}" class="img-thumbnail">
+                    </div>
+                    <div class="col-4">
+                        {{this.title}}
+                        <br>
+                        Authors : {{this.authors}}
+                        <br>
+                        Owner : {{this.owner}}
+                        <form method="POST" action="/tradesubmit">
+                            <input type="hidden" value="{{this.id}}" name="tradeSubmitId">
+                            <input type="hidden" value="{{this.owner}}" name="tradeSubmitOwner">
+                            {{#ifEquals this.currentUser this.owner}}
+                            {{else}}
+                                <button type="submit" class="btn btn-secondary">TRADE</button>
+                            {{/ifEquals}}
+                        </form>
+                    </div>
+            </div>
+            <br>
+
+        {{/each}}
+    {{else}}
+        {{#each allBooks}}
+            <img src="{{this.thumbnail}}" class="img-thumbnail">
+        {{/each}}
+    {{/if}}
+</div>

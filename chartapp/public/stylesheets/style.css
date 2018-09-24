@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #2f2f2f;
+}
+
+a {
+  color: #00B7FF;
+}
+.chartinfo{
+    margin: auto;
+}
+#bigcontainer{
+    background-color: #fff;
+    border-radius: 5px;
+}
+#chartcontainer{
+    margin:auto;
+    border-radius: 5px;
+}
+
+.chartelement{
+    margin: auto;
+    border-radius: 5px;
+}
+#inputcontainer{
+    margin: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+}

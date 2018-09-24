@@ -1,0 +1,19 @@
+body, html {
+    background-color: #2b2b2b;
+}
+
+.elementcontainer {
+    background-color: #616663;
+    margin: 5vh;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#maincontainer {
+
+}
+
+#incontainer {
+    margin: 2vh;
+    color: #fff;
+}

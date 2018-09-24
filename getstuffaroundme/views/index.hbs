@@ -1,0 +1,19 @@
+<div id="maincontainer" class="container col-6 mt-4">
+    {{#each result}}
+        <div class="elementcontainer">
+           <h3>{{this.name}}</h3>
+            {{this.formatted_address}}
+            <br>
+            <b>{{this.rating}}</b> / 5
+            <br>
+            <!--
+            lat : {{this.geometry.location.lat}} - lng : {{this.geometry.location.lng}}
+            <br>
+            {{this.photos}}
+            -->
+            <br>
+            <button id="{{this.id}}" class="goingbutton btn btn-secondary" onclick="buttonclicked(this)">Going  {{this.goingCount}}</button>
+        </div>
+    {{/each}}
+</div>
+

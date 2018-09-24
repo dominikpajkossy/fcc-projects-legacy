@@ -1,0 +1,54 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+
+<!-- You might want to try something fancier: -->
+<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
+<!-- pug: https://pugjs.org/ -->
+<!-- haml: http://haml.info/ -->
+<!-- hbs(handlebars): http://handlebarsjs.com/ -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Search Abstraction Layer</title>
+    <meta name="description" content="A cool thing made with Glitch">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>
+      Example Usage
+    </h1>
+    <h2>
+      Request : https://piquant-policeman.glitch.me/history
+    </h2>
+    
+    <h2>
+      Response : 
+    </h2>
+    <h3>
+      "\"[{\\\"term\\\":\\\"something\\\",\\\"date\\\":\\\"2017-09-12T13:39:59.007Z\\\"},{\\\"term\\\":\\\"anotherthing\\\",\\\"date\\\":\\\"2017-09-12T13:40:02.785Z\\\"}]\""
+    </h3>
+     
+    <h2>
+      Request : https://piquant-policeman.glitch.me/examplesearch?offset=10
+    </h2>
+    
+    <h2>
+      Response : 
+    </h2>
+    <h3>
+      "[{\"name\":\"Word Search Maker - word puzzle creator and generator\",\"hostPageDisplayUrl\":\"www.wordsearchprinter.com\",\"thumbnailUrl\":\"https://tse3.mm.bing.net/th?id=OIP.97gZpW5aFZbwIiSCxVq4_QEsEs&pid=Api\"},{\"name\":\"Boolean Searching Related Keywords & Suggestions - Boolean ...\",\"hostPageDisplayUrl\":\"www.suggest-keywords.com/Ym9vbGVhbiBzZWFyY2hpbmc\",\"thumbnailUrl\":\"https://tse4.mm.bing.net/th?id=OIP.2baj7dyTswIC7aOXb5_VgAEsDI&pid=Api\"},{\"name\":\"6 simple search tips: Lessons learned from the Scopus ...\",\"hostPageDisplayUrl\":\"https://blog.scopus.com/posts/6-simple-search-tips-lessons-learned...\",\"thumbnailUrl\":\"https://tse1.mm.bing.net/th?id=OIP.p3T8iBLldDHLkGWbmWo0SwEsDh&pid=Api\"},{\"name\":\"Vermont SEO | Google Ranking Services ...\",\"hostPageDisplayUrl\":\"www.commonwealthwebsolutions.com/website-design-for-small-business...\",\"thumbnailUrl\":\"https://tse1.mm.bing.net/th?id=OIP.dtUSp4cx_-_a5l1yy5oWKAEsCi&pid=Api\"},{\"name\":\"Custom Ranking | Custom Search | Google Developers\",\"hostPageDisplayUrl\":\"https://developers.google.com/custom-search/docs/ranking\",\"thumbnailUrl\":\"https://tse1.mm.bing.net/th?id=OIP.-_cwbJKkbpmJfjxypn1gvQEsDw&pid=Api\"},{\"name\":\"examples of databases - Video Search Engine at Search.com\",\"hostPageDisplayUrl\":\"https://www.search.com/video/examples-of-databases\",\"thumbnailUrl\":\"https://tse3.mm.bing.net/th?id=OIP.qRFaClqVIx9CTIMAPmsf7AEsDf&pid=Api\"},{\"name\":\"Google's Glossary Search Engine\",\"hostPageDisplayUrl\":\"googlesystem.blogspot.com/2008/02/googles-glossary-search-engine.html\",\"thumbnailUrl\":\"https://tse1.mm.bing.net/th?id=OIP.6EPNaJ4xdPGaQHOvGqJTGQEwDN&pid=Api\"},{\"name\":\"Conduct search engine discovery/reconnaissance for ...\",\"hostPageDisplayUrl\":\"https://www.owasp.org/index.php/Conduct_search_engine_discovery...\",\"thumbnailUrl\":\"https://tse3.mm.bing.net/th?id=OIP.ysNdqG6ip0-iiPfnIZ9vnwEsC6&pid=Api\"},{\"name\":\"examples of a browser - Video Search Engine at Search.com\",\"hostPageDisplayUrl\":\"https://www.search.com/video/examples-of-a-browser\",\"thumbnailUrl\":\"https://tse3.mm.bing.net/th?id=OIP.pcfhAi3AMS7Xjb-7yJ7x8QEsDm&pid=Api\"},{\"name\":\"Google-Search-Result\",\"hostPageDisplayUrl\":\"www.journaldev.com/7207/google-search-from-java-program-example\",\"thumbnailUrl\":\"https://tse3.mm.bing.net/th?id=OIP.18lCW9ZiG-2NWy0_O8fpJQEsEe&pid=Api\"}]"
+    </h3>
+
+    <!-- Your web-app is https, so your scripts need to be too -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
+            crossorigin="anonymous"></script>
+    <script src="/client.js"></script>
+
+  </body>
+</html>
